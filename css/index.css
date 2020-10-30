@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #181719;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+}
+
+.logo {
+  flex: 1;
+  background-clip: text;
+  background: linear-gradient(to right, #ff1b6b, #45caff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: "Pacifico", cursive;
+  font-size: 64px;
+  margin-left: 20px;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  /* background-color: tomato; */
+}
+
+.menu__item {
+  margin-right: 50px;
+  font-family: sans-serif;
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: 400;
+}
+
+.menu__item:hover {
+  transform: translate(5px, -10%);
+}
+
+.button-menu {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  font-size: 32px;
+  margin-right: 20px;
+  display: none;
+}
+
+/* Menu mobile */
+.menu-mobile {
+  background-color: #ffffff;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #181719;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(100%);
+  transition: all 0.5s ease-out;
+}
+
+.mobile-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu__item {
+  margin-bottom: 50px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.mobile-button-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+}
+
+/* Open mobile menu */
+.open-mobile-menu {
+  /* display: flex; */
+  transform: translateX(0);
+}
+
+@media only screen and (max-width: 1000px) {
+  .menu {
+    display: none;
+  }
+
+  .button-menu {
+    display: block;
+  }
+
+  .logo {
+    font-size: 32px;
+  }
+}
